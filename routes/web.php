@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('welcome', function () {
     return view('welcome');
 });
 
@@ -23,7 +23,7 @@ Route::get('example/{lang}', function ($lang) {
 });
 
 use App\Http\Controllers\TemplateController;
-Route::get('ex', 'App\Http\Controllers\TemplateController@index');
+Route::get('/', 'App\Http\Controllers\TemplateController@index');
 
 //Route::get('locale/{locale}', 'App\Http\Controllers\TranslateController@changeLocale')->name('reset');
 
